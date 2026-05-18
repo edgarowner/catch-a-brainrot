@@ -127,7 +127,7 @@ export function makeBattle(p) {
     },
     load() {
       this.battleBackgroundImage = p.loadImage("assets/battle-background.png");
-      this.npc.spriteRef = p.loadImage("assets/GENTLEMAN.png");
+      this.npc.spriteRef = p.loadImage("assets/MEMELORD.png");
       this.npcBrainrot.spriteRef = p.loadImage("assets/TRALALERO.png");
       this.playerBrainrot.spriteRef = p.loadImage("assets/BOMBARDIRO.png");
       this.playerBrainrot.dataBox.spriteRef = p.loadImage(
