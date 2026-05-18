@@ -1,4 +1,4 @@
-import { makeCollidable } from "./collidable.js";
+import { makeCollidable } from "./Collidable.js";
 import { drawTile, getFramesPos } from "../utils.js";
 
 export function makeTiledMap(p, x, y) {
