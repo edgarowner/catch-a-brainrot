@@ -21,6 +21,15 @@ export function makeTiledMap(p, x, y) {
           return layer.objects;
         }
       }
+      return [];
+    },
+    getObjects(layerName) {
+      for (const layer of this.tiledData.layers) {
+        if (layer.name === layerName && layer.type === "objectgroup") {
+          return layer.objects || [];
+        }
+      }
+      return [];
     },
     draw(camera, player) {
       for (const layer of this.tiledData.layers) {

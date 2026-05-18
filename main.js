@@ -9,13 +9,15 @@ new p5((p) => {
   let currentScene = "menu";
   function setScene(name) {
     if (scenes.includes(name)) {
+      if (name === "battle" && battle) battle.start(window.__nextWildBrainrot);
       currentScene = name;
     }
   }
 
   const menu = makeMenu(p);
-  const world = makeWorld(p, setScene);
   const battle = makeBattle(p);
+  const world = makeWorld(p, setScene);
+  window.__brainrotDebug = { setScene, battle, world };
 
   p.preload = () => {
     font = p.loadFont("./assets/power-clear.ttf");
